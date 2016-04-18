@@ -1,0 +1,11 @@
+class FavoriteMailer < ApplicationMailer
+   default from: "mattcheang@yahoo.com"
+
+   def new_user(user)
+
+     headers["Message-ID"] = "<#{@user}@your-app-name.example>"
+     @user = user
+
+     mail(to: user.email, subject: "Welcome to Bloccitoff")
+   end
+end

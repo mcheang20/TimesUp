@@ -4,13 +4,13 @@
        <br />
        <% avatar_url = @user.avatar_url(128) %>
        <% if avatar_url %>
-         <div class="media-left">
-           <%= image_tag avatar_url, class: 'media-object' %>
-         </div>
+      <div class="media-left">
+          <%= image_tag avatar_url, class: 'media-object' %>
+      </div>
        <% end %>
-       <div class="media-body">
-         <h2 class="media-heading"><%= @user.username %></h2>
-         <small>
-           <%= @user.email %>
-         </small>
-       </div>
+    <div class="media-body">
+      <h2 class="media-heading"><%= @user.username %></h2>
+      <small>
+          <%= @user.email %>
+       </small>
+    </div>
