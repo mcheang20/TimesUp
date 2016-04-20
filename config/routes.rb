@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :users, only: [:show]
+  resources :users, only: [:new, :show] do
+    resources :items, only: [:new, :create]
+end
 
   root to: 'users#show'
 
