@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [:new, :show] do
-    resources :items, only: [:new, :create]
+    resources :items, only: [:create, :destroy]
 end
 
-  root to: 'users#show'
+
+  root to: 'welcome#index'
 
 
 

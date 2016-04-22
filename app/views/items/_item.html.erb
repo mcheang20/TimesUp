@@ -1,1 +1,4 @@
-<p><%= item.name %></p>
+<p>
+  <%= item.name %>
+  <%= link_to "", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+</p>
