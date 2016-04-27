@@ -16,9 +16,12 @@
     </div>
   <div class="row">
     <div class="col-md-8">
+      <h1>New Item </h1>
       <%= render partial: 'items/form', locals: {item: Item.new} %>
       <h2>Items</h2>
-      <%= render current_user.items %>
+      <div class="js-items">
+        <%= render current_user.items %>
+      </div>
       <br />
     </div>
   </div>
