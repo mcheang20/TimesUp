@@ -2,11 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
  .task {
-  text-shadow: 1px 1px black;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   margin-top: 10px;
   border-radius: 5px;
+  display: block;
+  font-weight: 600;
 }
 
 /*.js-item, p {
@@ -16,9 +17,10 @@
 } */
 
  .list {
-  text-shadow: 1px 1px black;
   background-color: rgba(255, 255, 255, 0.8);
   margin-top: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
+  display: block;
+  font-weight: 600;
 }
