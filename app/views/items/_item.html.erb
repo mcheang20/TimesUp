@@ -3,6 +3,6 @@
 <% else %>
 <p class="item" id="item-<%= item.id %>">
   <%= item.name %> have <%= distance_of_time_in_words(item.created_at, 7.days.from_now, include_seconds: false) %> left
-  <%= link_to "", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-thumbs-up', data: {confirm: "Have you completed this task?"} %>
+  <%= link_to "", [item.user, item], method: :delete, remote: true, class: 'fa fa-thumbs-up', data: {confirm: "Have you completed this task?"} %>
 </p>
 <% end %>

@@ -1,28 +1,24 @@
 <div class="user-heading">
-   <% avatar_url = @user.avatar_url(200) %>
+   <% avatar_url = @user.avatar_url(100) %>
    <% if avatar_url %>
   <div class="avatar-img">
     <%= image_tag avatar_url, class: 'media-object' %>
   </div>
    <% end %>
   <div>
-    <h2>Hello <%= @user.username %></h2>
+    <h1>Hello <%= @user.username %></h1>
     <h2>Here's Your To Do List</h2>
-    <small>
-      <%= @user.email %>
-    </small>
   </div>
 </div>
-  <p class="icon glyphicon glyphicon-check"></p>
   <div class="container task">
     <div class="col-md-12">
-      <h1 class="glyphicon glyphicon-check">Tasks</h1>
+    <h1><i class="fa fa-check-square-o" aria-hidden="true"></i>Tasks</h1>
       <%= render partial: 'items/form', locals: {item: Item.new} %>
     </div>
   </div>
   <div class="container list">
     <div class="col-md-12">
-      <h1>Things To Do (<%= current_user.items.count%>)</h1>
+      <h1><i class="fa fa-tasks" aria-hidden="true"></i>Things To Do (<%= current_user.items.count%>)</h1>
       <div class="js-items">
         <%= render current_user.items %>
       </div>

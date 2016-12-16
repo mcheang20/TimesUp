@@ -15,6 +15,8 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
 html {
   min-height: 100%;
@@ -28,7 +30,7 @@ body {
   text-align: center;
   width: 100%;
   background-size: cover;
-  background-color: #FF7F50;
+  background-color: teal;
 }
 
 .navbar-app {
@@ -52,10 +54,12 @@ body {
 
 .title {
   font-size: 90px;
-  font-family: monospace;
-  border-bottom: 1px solid rgba(1,1,1,.5);
+  font-family: sans-serif;
+  border-bottom: 5px solid;
   margin-bottom: 20px;
-  font-weight: 200;
+  font-weight: 400;
+  padding-bottom: 10px;
+  color: white;
 }
 
 .input {
@@ -101,7 +105,6 @@ body {
   font-size: 16px;
   height: auto;
   padding: 3px 12px;
-  border-radius: 5px;
 }
 
 .border-form-div .actions .btn {
@@ -143,13 +146,5 @@ body {
   .btn:nth-child(2) {
     margin-top: 6px;
     margin-left: -13px;
-  }
-}
-
-.user-heading {
-
-  h2 {
-    font-size: 26px;
-    font-weight: 200;
   }
 }
