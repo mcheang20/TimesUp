@@ -1,7 +1,7 @@
 #TimesUp
 
 A simple application to keep track of tasks and help you become more productive.
-- Crated using Ruby on Rails.
+- Developed using Ruby on Rails.
 - Create and delete tasks as you go.
 - Automatic deletion for incomplete tasks.
 
