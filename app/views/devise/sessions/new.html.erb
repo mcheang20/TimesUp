@@ -2,7 +2,7 @@
 <h2>Sign In</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
+<div class="user-signin">
   <div class="row">
     <div class="form-group">
     <%= f.label :email %><br />
@@ -26,6 +26,6 @@
     <%= f.submit "Log in", :class=>'btn btn-success' %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>
 </div>
