@@ -1,17 +1,46 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.selling-points {
-     position: relative;
- }
 
- .point {
-     position: relative;
-     padding: 2rem;
-     text-align: center;
-     opacity: 1;
-     -webkit-transform: scaleX(0.9) translateY(3rem);
-     -moz-transform: scaleX(0.9) translateY(3rem);
-     transform: scaleX(0.9) translateY(3rem);
+//learn more page
+.learn {
+  background-image: url("learn.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(40%);
+  height: 100vh;
+  section {
+    padding-top: 200px;
+    padding-right: 50px;
+    color: white;
+    width: 60%;
+    float: right;
+  }
+  h1{
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+}
 
- }
+@media screen and (max-width: 790px) {
+  .learn section {
+    text-align: center;
+    float: none;
+    padding: 200px 20px 0 20px;
+    width: 100%;
+  }
+  .learn h1 {
+    text-shadow: 0 0 3px rgba(1,1,1,.2);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .learn h1 {
+    font-size: 2em;
+  }
+  .learn p {
+    font-size: 1.2em;
+  }
+}

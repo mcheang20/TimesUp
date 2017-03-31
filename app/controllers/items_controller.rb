@@ -5,11 +5,11 @@ class ItemsController < ApplicationController
     @item = @user.items.new(item_params)
     @new_item = Item.new
 
-     if @item.save
-        flash[:notice] = "Item saved successfully."
-      else
-        flash[:alert] = "Item failed to save."
-      end
+    if @item.save
+      flash[:notice] = "Item saved successfully."
+    else
+      flash[:alert] = "Item failed to save."
+    end
 
     respond_to do |format|
       format.html
@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
   def destroy
     @user = current_user
     @item = @user.items.find(params[:id])
+
     if @item.destroy
       flash[:notice] = "Item was deleted successfully."
     else

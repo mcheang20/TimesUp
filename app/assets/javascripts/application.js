@@ -24,3 +24,11 @@ blocmetrics.report = function(eventName){
   request.setRequestHeader('Content-Type', 'application/json');
   request.send(JSON.stringify(event));
 }
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert-wrapper').fadeOut("slow", function(){
+      $(this).remove();
+    })
+  }, 5000);
+});

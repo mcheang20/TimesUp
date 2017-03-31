@@ -1,81 +1,80 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
- .task {
+.user-page {
+  background-color: #273232;
+  height: 100%;
+}
+
+//begin user header
+.user-heading {
+  padding-top: 90px;
+  h1 {
+    margin-top: 0;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 3em;
+    text-align: center;
+    font-weight: 200;
+    margin-top: -5px;
+    color: white;
+  }
+}
+
+.task {
   text-align: center;
   background-color: white;
   margin-top: 10px;
-  border-radius: 5px;
   display: block;
   box-shadow: 0 0 10px;
-
-    h1 {
-      font-size: 40px;
-      font-weight: 200;
-      color: rgba(1,1,1,.5);
+  h1 {
+    font-size: 3em;
+    font-weight: 200;
+  }
+  i {
+    padding-right: 5px;
+  }
+  .btn {
+    background-color: #00ffcb;
+    border-color: #00ffcb;
+    color: white;
+    transition: .5s;
+    &:hover {
+      transform: scale(1.1);
     }
-
-    i {
-      padding-right: 5px;
-    }
-
-    .btn {
-      background-color: white;
-      border-color: rgba(1,1,1,.5);
-      color: rgba(1,1,1,.6);
-      border-radius: 25px;
-    }
+  }
 }
 
-/*.js-item, p {
+//begin user items box
+.list {
   background-color: white;
-  margin-left: 10px;
-  margin-right: 10px;
-} */
-
- .list {
-  background-color: white;
+  text-align: center;
+  padding: 20px;
   margin-top: 10px;
-  border-radius: 5px;
   margin-bottom: 25px;
   display: block;
   box-shadow: 0 0 10px;
-
-    h1 {
-      font-size: 40px;
-      font-weight: 200;
-      color: rgba(1,1,1,.5);
-    }
-
-    i {
-      padding-right: 5px;
-    }
+  h1 {
+    font-size: 3em;
+    font-weight: 200;
+    margin: 0 0 10px 0;
+  }
+  i {
+    padding-right: 5px;
+  }
 }
 
 .avatar-img {
-  margin-left: 645px;
+  text-align: -webkit-center;
 }
 
 .icon {
   position: absolute;
   font-size: 30px;
-}
-
-.user-heading {
-
-  h1 {
-    margin-top: 0;
-    color: white;
-    font-weight: 300;
-    font-size: 46px;
-  }
-
-  h2 {
-    font-size: 26px;
-    font-weight: 200;
-    margin-top: -5px;
-    color: white;
-  }
 }
 
 .user-signin {

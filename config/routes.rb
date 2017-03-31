@@ -6,11 +6,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :show] do
     resources :items, only: [:create, :destroy]
-end
+  end
 
-
-  root to: 'welcome#index'
-
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
 
 
 

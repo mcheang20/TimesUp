@@ -20,99 +20,118 @@
 
 html {
   min-height: 100%;
+  font-size: 16px;
 }
 
 body {
   min-height: 100%;
 }
 
-.home {
-  text-align: center;
-  width: 100%;
+//user log in sign up pages
+.user-auth {
+  background-image: url("home.jpg");
+  padding-top: 150px;
   background-size: cover;
-  background-color: teal;
+  text-align: center;
+  filter: grayscale(50%);
+  width: 100%;
+  height: 100vh;
 }
 
+@media screen and (max-width: 980px) {
+  .user-auth {
+    padding-top: 65px;
+  }
+}
+
+//navigation bar
 .navbar-app {
-  font-size: 28px;
+  position: absolute;
+  z-index: 100;
+  font-size: 2em;
   color: black;
-  background-color: white;
   width: 100%;
-  opacity: .75;
-  margin-bottom: 0px;
   display: block;
   font-weight: 600;
-
-    a {
-      color: black;
+  a {
+    color: white;
+    &:hover{
+      text-decoration: none;
     }
-
-    a:nth-child(1) {
-      padding-left: 10px;
-    }
+  }
+  a:nth-child(1) {
+    padding-left: 10px;
+  }
 }
 
-.title {
-  font-size: 90px;
-  font-family: sans-serif;
-  border-bottom: 5px solid;
-  margin-bottom: 20px;
-  font-weight: 400;
-  padding-bottom: 10px;
-  color: white;
+@media screen and (max-width: 420px) {
+  .navbar-app img:nth-child(1) {
+    height: 30px;
+  }
 }
 
 .input {
   border-radius: 5px;
 }
 
+//user dropdown menu
 .user-control {
   float: right;
-  font-size: 16px;
+  font-size: .75em;
   display: block;
   font-weight: 400;
+  padding: 5px 20px 0 0;
 }
 
+//sign up and log in box
 .border-form-div {
-  max-width: 350px;
   height: 400px;
+  width: 35%;
   font-weight: 600;
   padding: 19px 29px 29px;
   margin: 0 auto 20px;
   background-color: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(1,1,1,.1);
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-          box-shadow: 0 1px 2px rgba(0,0,0,.05);
-
-    h2 {
-      color: rgba(1,1,1,.6);
-      font-weight: 200;
-    }
-
-    label {
-      color: rgba(1,1,1,.6);
-      font-weight: 400;
-    }
+  h2 {
+    color: rgba(1,1,1,.6);
+    font-size: 2.5em;
+  }
+  label {
+    color: rgba(1,1,1,.6);
+    font-size: 1em;
+  }
 }
 
 .border-form-div input[type="text"],
 .border-form-div input[type="email"],
 .border-form-div input[type="password"] {
-  font-size: 16px;
+  font-size: 1em;
   height: auto;
   padding: 3px 12px;
+  width: 75%;
+  border: 1px solid rgba(1,1,1,.2);
 }
 
 .border-form-div .actions .btn {
-  margin-top: 5px;
+  margin-top: 10px;
+  width: 75%;
+  background: #00ffcb;
+  border: 1px solid #00ffcb;
 }
 
+@media screen and (max-width: 990px) {
+  .border-form-div {
+    width: 75%;
+  }
+}
+
+//edit user box
 .edit-user {
   max-width: 500px;
+  text-align: center;
   font-weight: 600;
   padding: 19px 29px 29px;
   margin: 0 auto 20px;
@@ -124,25 +143,30 @@ body {
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
           box-shadow: 0 1px 2px rgba(0,0,0,.05);
-
   h2 {
-    font-size: 36px;
-    font-weight: 200;
+    font-size: 2.5em;
+  }
+  label {
+    color: rgba(1,1,1,.6);
+    font-size: 1em;
   }
 }
 
 .edit-user input[type="text"],
 .edit-user input[type="email"],
 .edit-user input[type="password"] {
-  font-size: 14px;
+  font-size: 1em;
+  width: 75%;
   height: auto;
   padding: 3px 12px;
-  border-radius: 5px;
   border: 1px solid rgba(1,1,1,.2);
 }
 
 .edit-user .actions .btn {
-  margin-top: 5px;
+  margin-top: 10px;
+  background-color: #00ffcb;
+  border: 1px solid #00ffcb;
+  width: 75%;
 }
 
 .btn-user {
@@ -153,4 +177,62 @@ body {
     margin-top: 6px;
     margin-left: -13px;
   }
+}
+
+//alert banner
+.alert-wrapper {
+  padding: 15px;
+  margin-top: 70px;
+  position: absolute;
+  z-index: 100;
+  background: #00ffcb;
+  border-radius: 3px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: .5px;
+}
+
+//home content
+.home-desc {
+  color: white;
+  h1{
+    font-size: 3em;
+  }
+  p{
+    font-size: 1.5em;
+  }
+  .btn {
+    background-color: #00ffcb;
+    border: 1px solid #00ffcb;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5em;
+    transition: .5s;
+    width: 50%;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+//user navigation
+.avatar-btn {
+  background-color: rgba(1,1,1,0);
+  border: none;
+}
+
+.dropdown-menu {
+  font-size: .8em;
+  margin-left: -90px;
+}
+
+//user edit page
+.edit-user-page {
+  background-color: #273232;
+  padding: 100px 0 50px 0;
+  height: 100%;
 }
